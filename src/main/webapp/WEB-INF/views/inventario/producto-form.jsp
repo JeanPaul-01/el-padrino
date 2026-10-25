@@ -13,7 +13,7 @@
             <div class="row g-3">
                 <div class="col-md-8">
                     <label class="form-label">Nombre *</label>
-                    <input type="text" name="nombre" class="form-control" maxlength="100" value="<c:out value='${producto.nombre}'/>" required>
+                    <input type="text" name="nombre" class="form-control" maxlength="100" value="<c:out value='${producto.nombre}'/>" required pattern=".*\S.*" title="El nombre no puede estar vacío ni contener solo espacios">
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">Categoría</label>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">Precio (S/) *</label>
-                    <input type="number" name="precio" class="form-control" min="0" step="0.01" value="${producto.precio}" required>
+                    <input type="number" name="precio" class="form-control" min="0.01" step="0.01" value="${producto.precio}" required title="El precio debe ser mayor que 0">
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">Stock mínimo *</label>
