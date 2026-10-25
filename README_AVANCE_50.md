@@ -58,6 +58,17 @@ Además: mantenimiento de servicios, barberos y usuarios (este último solo para
   automáticamente (corte gratis) y la tarjeta se reinicia.
 - **Seguridad**: contraseñas cifradas con PBKDF2, sesión obligatoria, roles Administrador/Recepcionista.
 
+### Funcionalidades del módulo de clientes
+
+El módulo de gestión de clientes permite:
+
+- Consultar los clientes registrados en el sistema.
+- Buscar clientes para facilitar su identificación.
+- Acceder al perfil de cada cliente y consultar su historial.
+- Visualizar la tarjeta de fidelización asociada al cliente.
+
+La ruta principal del módulo es `/clientes`, mientras que el perfil individual se consulta mediante `/clientes/{id}`.
+
 ## Estructura
 
 ```
