@@ -1,0 +1,13 @@
+target/
+.git/
+.github/
+.mvn/
+.vscode/
+.idea/
+database/
+*.zip
+*.md
+mvnw
+mvnw.cmd
+Dockerfile
+render.yaml

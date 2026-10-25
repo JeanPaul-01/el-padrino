@@ -1,0 +1,45 @@
+/* Estilos de la Barbería "El Padrino" sobre Bootstrap 5 */
+:root {
+    --padrino-oscuro: #1d1714;
+    --padrino-cafe: #7b4b2a;
+    --padrino-dorado: #c9a227;
+}
+
+body { background: #f4f1ed; }
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: var(--padrino-oscuro);
+}
+.sidebar .marca { color: #fff; font-weight: 700; letter-spacing: .5px; }
+.sidebar .marca i { color: var(--padrino-dorado); }
+.sidebar .nav-link { color: #cfc6bf; border-radius: .5rem; padding: .55rem .9rem; }
+.sidebar .nav-link:hover { color: #fff; background: rgba(255, 255, 255, .07); }
+.sidebar .nav-link.active { color: #fff; background: var(--padrino-cafe); }
+.sidebar .seccion { color: #8d827a; font-size: .72rem; text-transform: uppercase; letter-spacing: 1px; margin: 1rem .9rem .3rem; }
+
+.btn-padrino { background: var(--padrino-cafe); border-color: var(--padrino-cafe); color: #fff; }
+.btn-padrino:hover { background: #643c20; border-color: #643c20; color: #fff; }
+
+.kpi { border: 0; border-radius: .9rem; }
+.kpi .valor { font-size: 1.9rem; font-weight: 700; }
+.kpi .icono { font-size: 2rem; opacity: .35; }
+
+.dia-col { min-height: 320px; }
+.cita-card { border-left-width: 4px !important; }
+
+.barra { background: var(--padrino-cafe); height: 18px; border-radius: 4px; min-width: 2px; }
+
+.sello { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--padrino-cafe);
+         display: inline-flex; align-items: center; justify-content: center; color: var(--padrino-cafe); }
+.sello.lleno { background: var(--padrino-cafe); color: #fff; }
+
+@media (max-width: 991.98px) {
+    .sidebar { width: 100%; min-height: auto; }
+}
+
+@media print {
+    .sidebar, .no-print { display: none !important; }
+    body { background: #fff; }
+}

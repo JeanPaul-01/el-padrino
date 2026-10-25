@@ -1,0 +1,13 @@
+package com.elpadrino.repository;
+
+import com.elpadrino.model.Servicio;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
+    List<Servicio> findAllByOrderByNombreAsc();
+    List<Servicio> findByEstadoTrueOrderByNombreAsc();
+    boolean existsByNombreIgnoreCase(String nombre);
+    boolean existsByNombreIgnoreCaseAndIdServicioNot(String nombre, Integer idServicio);
+}

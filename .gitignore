@@ -1,0 +1,62 @@
+# Documentación de ayuda local
+HELP.md
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Spring Boot
+spring.log
+
+# Eclipse / Spring Tool Suite
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Gradle
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Visual Studio Code
+.vscode/
+
+# Archivos comprimidos
+*.zip
+
+# Archivos de configuración local
+.env
+.env.*
+!.env.example
+
+# Archivos generados por Maven
+target/
+
+# Respaldos de bases de datos
+*.sql.zip
+*.bak
+*.dump

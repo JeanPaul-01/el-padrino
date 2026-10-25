@@ -1,0 +1,24 @@
+# Blueprint de Render: crea el servicio web desde este repositorio.
+# Render > New > Blueprint > seleccionar el repositorio.
+services:
+  - type: web
+    name: el-padrino
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /login
+    autoDeploy: true
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: TZ
+        value: America/Lima
+      # Valores de Aiven: se ingresan en el panel de Render (no se guardan en Git)
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
