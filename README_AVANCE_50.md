@@ -87,3 +87,8 @@ database/                        scripts MySQL y consultas SQL del Anexo
 
 Sin contar librerías externas: Java ≈ 64 % de las líneas de código y JSP ≈ 34 %
 (JSP también es tecnología Java). El requisito de "al menos 50 % de Java" se cumple.
+
+## Módulo de Ventas y Pagos (Mejora)
+- Se revisó el cálculo de totales.
+- Se verificó el descuento de stock al realizar una venta.
+- Se agregó esta documentación para evidenciar la mejora.
