@@ -37,7 +37,25 @@ public class ServicioService {
     @Transactional
     public Servicio guardar(Servicio datos) {
         String nombre = Validaciones.obligatorio(datos.getNombre(), "nombre");
+        
+        // Validar longitud del nombre
+        if (nombre.length() > 100) {
+            throw new ReglaNegocioException(
+                "El nombre del servicio no puede superar los 100 caracteres"
+            );
+        }
+
+        // Validar longitud de la descripcion
+        String descripcion = datos.getDescripcion();
+        if (descripcion != null && descripcion.length() > 255) {
+            throw new ReglaNegocioException(
+                "La descripcion no puede superar los 255 caracteres"
+            );
+        }
+        
+        // Validar precio
         Validaciones.montoNoNegativo(datos.getPrecio(), "precio");
+
 
         boolean duplicado = datos.getIdServicio() == null
                 ? servicioRepository.existsByNombreIgnoreCase(nombre)
