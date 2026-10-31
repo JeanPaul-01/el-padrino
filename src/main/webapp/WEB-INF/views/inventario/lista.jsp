@@ -7,6 +7,7 @@
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
     <h1 class="h3 fw-bold mb-0">Inventario de productos</h1>
     <div class="d-flex gap-2">
+        <a href="${ctx}/inventario/exportar" class="btn btn-outline-success"><i class="bi bi-file-earmark-excel me-1"></i>Exportar Excel</a>
         <a href="${ctx}/reportes/stock-clientes" class="btn btn-outline-dark"><i class="bi bi-file-earmark-text me-1"></i>Reporte de stock bajo</a>
         <a href="${ctx}/productos/nuevo" class="btn btn-padrino"><i class="bi bi-plus-lg me-1"></i>Nuevo producto</a>
     </div>
