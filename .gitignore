@@ -60,3 +60,6 @@ target/
 *.sql.zip
 *.bak
 *.dump
+
+# Logs de Logback
+logs/

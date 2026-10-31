@@ -64,6 +64,26 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Google Guava: precondiciones y colecciones inmutables -->
+		<dependency>
+    			<groupId>com.google.guava</groupId>
+    			<artifactId>guava</artifactId>
+    			<version>33.3.1-jre</version>
+		</dependency>
+
+		<!-- Apache POI: exportación de reportes a Excel (.xlsx) -->
+		<dependency>
+    			<groupId>org.apache.poi</groupId>
+    			<artifactId>poi-ooxml</artifactId>
+    			<version>5.3.0</version>
+		</dependency>
+
+		<!-- Apache Commons Lang: utilidades de texto (la versión la gestiona Spring Boot) -->
+		<dependency>
+    			<groupId>org.apache.commons</groupId>
+    			<artifactId>commons-lang3</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -71,6 +91,19 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<doctitle>Sistema de Gestión Integral – Barbería El Padrino</doctitle>
+					<windowtitle>El Padrino – Javadoc</windowtitle>
+					<encoding>UTF-8</encoding>
+					<docencoding>UTF-8</docencoding>
+					<charset>UTF-8</charset>
+					<doclint>none</doclint>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
